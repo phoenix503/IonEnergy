@@ -17,7 +17,7 @@
         <ImageView
             android:id="@+id/movie_pic"
             android:layout_width="120dp"
-            android:layout_margin="8dp"
+            android:layout_margin="4dp"
             android:layout_height="120dp"
             android:transitionName="@string/simple_activity_transition"
             tools:ignore="UnusedAttribute"/>

@@ -1,13 +1,10 @@
-package com.suite.ionenergy;
+package com.suite.ionenergy.API;
 
 
-import java.util.ArrayList;
+import com.suite.ionenergy.models.MovieListClass;
 
 import retrofit2.Call;
-import retrofit2.http.Body;
 import retrofit2.http.GET;
-import retrofit2.http.POST;
-import retrofit2.http.Query;
 
 public interface APIClient {
 

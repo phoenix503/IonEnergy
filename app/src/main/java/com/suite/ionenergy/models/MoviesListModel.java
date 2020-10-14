@@ -1,4 +1,4 @@
-package com.suite.ionenergy;
+package com.suite.ionenergy.models;
 
 import com.google.gson.JsonArray;
 
@@ -6,6 +6,8 @@ public class MoviesListModel {
     private String original_name;
     private Integer id;
     private String name;
+    private String title;
+    private String release_date;
     private Integer vote_count;
     private Float vote_average;
     private String first_air_date;
@@ -19,6 +21,21 @@ public class MoviesListModel {
     private String media_type;
 
 
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getRelease_date() {
+        return release_date;
+    }
+
+    public void setRelease_date(String release_date) {
+        this.release_date = release_date;
+    }
 
     public String getOriginal_name() {
         return original_name;

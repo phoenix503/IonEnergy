@@ -1,15 +1,17 @@
-package com.suite.ionenergy;
+package com.suite.ionenergy.ui;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
-import java.util.ArrayList;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.suite.ionenergy.API.APIClient;
+import com.suite.ionenergy.API.APIService;
+import com.suite.ionenergy.Adapters.MoviesAdapter;
+import com.suite.ionenergy.R;
+import com.suite.ionenergy.models.MovieListClass;
 
 import retrofit2.Call;
 import retrofit2.Callback;

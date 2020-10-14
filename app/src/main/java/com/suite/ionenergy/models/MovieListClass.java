@@ -1,4 +1,4 @@
-package com.suite.ionenergy;
+package com.suite.ionenergy.models;
 
 import java.util.ArrayList;
 

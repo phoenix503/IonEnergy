@@ -1,16 +1,16 @@
-package com.suite.ionenergy;
+package com.suite.ionenergy.Adapters;
 
-import android.media.Image;
 import android.os.Build;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.suite.ionenergy.R;
 
 public class MoviesViewHolder extends RecyclerView.ViewHolder {
     protected TextView name;
