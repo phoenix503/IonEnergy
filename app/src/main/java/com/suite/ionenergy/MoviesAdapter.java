@@ -1,5 +1,6 @@
 package com.suite.ionenergy;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
@@ -11,6 +12,8 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
+import androidx.core.app.ActivityOptionsCompat;
+import androidx.core.view.ViewCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
@@ -50,27 +53,35 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesViewHolder>  {
 
 
     @Override
-    public void onBindViewHolder(@NonNull MoviesViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull final MoviesViewHolder holder, final int position) {
 
 
+        if(recentListModel.get(position).getName() != null && recentListModel.get(position).getPoster_path() != null){
             Glide.with(context)
-                    .load("https://image.tmdb.org/t/p/w185/"+recentListModel.get(position).getPoster_path())
+                    .load(Constants.BASE_URL_IMAGE+recentListModel.get(position).getPoster_path())
                     .placeholder(R.drawable.ic_launcher_background)
                     .into(holder.imageView);
 
             holder.name.setText(recentListModel.get(position).getName());
+        }
 
 
+        holder.cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
+                Intent resultIntent = new Intent(context, MovieDetails.class);
+                resultIntent.putExtra("name", recentListModel.get(position).getOriginal_name());
+                resultIntent.putExtra("image", recentListModel.get(position).getPoster_path());
 
-//        holder.itemcard.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent i = new Intent(context, FeedDetails.class);
-//                i.putExtra("post_uuid", holder.id.getText().toString());
-//                context.startActivity(i);
-//            }
-//        });
+                ActivityOptionsCompat options = ActivityOptionsCompat.
+                        makeSceneTransitionAnimation((Activity) context,
+                                holder.imageView,
+                                ViewCompat.getTransitionName(holder.imageView));
+
+                context.startActivity(resultIntent,options.toBundle());
+            }
+        });
     }
 
 }

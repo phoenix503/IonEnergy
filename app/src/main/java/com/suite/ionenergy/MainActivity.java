@@ -1,6 +1,7 @@
 package com.suite.ionenergy;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -34,7 +35,8 @@ public class MainActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.movielist);
 
         recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this));
+        recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
+
     }
 
     private void fetchMoviesList() {

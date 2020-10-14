@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
+<androidx.cardview.widget.CardView android:id="@+id/cardView"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    card_view:cardBackgroundColor="#E6E6E6"
     card_view:cardCornerRadius="8dp"
     android:layout_margin="8dp"
-    card_view:cardElevation="8dp">
+    card_view:cardElevation="8dp"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <LinearLayout
        android:layout_width="match_parent"
@@ -18,17 +18,18 @@
             android:id="@+id/movie_pic"
             android:layout_width="120dp"
             android:layout_margin="8dp"
-            android:background="@color/colorPrimary"
-            android:layout_height="120dp"/>
+            android:layout_height="120dp"
+            android:transitionName="@string/simple_activity_transition"
+            tools:ignore="UnusedAttribute"/>
 
         <TextView
             android:id="@+id/movie_name"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:text="Movie Name"
             android:textColor="@android:color/black"
             android:layout_gravity="center"
             android:gravity="center"
-            android:textSize="20sp"
+            android:textSize="14sp"
             android:layout_margin="8dp"
             android:layout_height="wrap_content"/>
 

@@ -19,6 +19,7 @@ public class MoviesListModel {
     private String media_type;
 
 
+
     public String getOriginal_name() {
         return original_name;
     }
@@ -130,4 +131,7 @@ public class MoviesListModel {
     public void setMedia_type(String media_type) {
         this.media_type = media_type;
     }
+
+
 }
+
