@@ -40,7 +40,9 @@
             android:id="@+id/movie_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="4dp"
             android:layout_toRightOf="@id/cardView"
             android:text="Movie Name"
             android:textColor="@color/colorPrimary"
@@ -52,7 +54,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/movie_name"
-            android:layout_margin="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="4dp"
             android:layout_toRightOf="@id/cardView">
 
             <ImageView
@@ -78,7 +82,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/movie_date_ll"
-            android:layout_margin="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="4dp"
             android:layout_toRightOf="@id/cardView">
 
             <ImageView
@@ -106,7 +112,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/movie_avg"
-            android:layout_margin="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="4dp"
             android:layout_toRightOf="@id/cardView">
 
             <ImageView
@@ -148,7 +156,7 @@
             android:layout_margin="8dp"
             android:text="Movie Name"
             android:textColor="@android:color/black"
-            android:textSize="14sp"
+            android:textSize="18sp"
             android:textStyle="normal" />
 
 

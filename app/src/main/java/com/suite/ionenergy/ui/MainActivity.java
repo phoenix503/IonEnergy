@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
             public void onResponse(Call<MovieListClass> call, Response<MovieListClass> response) {
                 switch (response.code()){
                     case 200:
-                        Log.e("response", response.body().getResults().get(0).getName());
+//                        Log.e("response", response.body().getResults().get(0).getName());
                         MoviesAdapter moviesAdapter = new MoviesAdapter(MainActivity.this, response.body().getResults());
                         recyclerView.setAdapter(moviesAdapter);
                         break;
